@@ -1,5 +1,11 @@
+/**
+ * Este paquete corresponde a la parte grafica
+ */
 package co.edu.unbosque.views;
-
+/**
+ * Se genera cuando se llama al código que depende de un teclado,
+ *  una pantalla o un mouse en un entorno que no admite un teclado, una pantalla o un mouse.
+ */
 import java.awt.Color;
 import java.awt.Font;
 
@@ -7,18 +13,28 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
 /**
- * 
- * @author sofia
+ * Esta clase corresponde a la Ventana del Menu
+ * @author Sofia Morales
  *
  */
 public class VentanaMenu extends JFrame{
+	/**
+	 * Encapsulo pim 
+	 */
 	private PanelImgGuia pim;
+	/**
+	 * Encapsulo admin
+	 */
 	private JButton admin; 
+	/**
+	 * Encapsulo user y volver
+	 */
 	private JButton user, volver;
 	/**
-	 * 
+	 * Metodo constructor de la Ventana menu, aqui se inicializa
 	 */
 	public VentanaMenu() {
+
 		setSize(742,595);
 		setTitle("Menu");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
