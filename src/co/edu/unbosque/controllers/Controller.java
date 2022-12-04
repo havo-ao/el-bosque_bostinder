@@ -24,6 +24,7 @@ import co.edu.unbosque.views.UserWindowApp;
 import co.edu.unbosque.views.VentanaAdmin;
 import co.edu.unbosque.views.VentanaMenu;
 import co.edu.unbosque.views.VentanaPrincipal;
+import co.edu.unbosque.views.VentanaSelectionSort;
 import co.edu.unbosque.views.VentanaStadistics;
 
 public class Controller implements ActionListener { // ItemListener {
@@ -46,6 +47,8 @@ public class Controller implements ActionListener { // ItemListener {
 	private UserWindowApp  userWindowApp;
 	//private PanelImagenPersona panelPersona;
 	private EnviarCorreos sendEmail;
+
+	private VentanaSelectionSort windowSelection;
 	public Controller() {
 		mainWindow = new VentanaPrincipal();
 		menuWindow = new VentanaMenu();
@@ -59,7 +62,9 @@ public class Controller implements ActionListener { // ItemListener {
 		stadisticWindow = new VentanaStadistics();
 		userWindowApp = new UserWindowApp();
 		sendEmail = new EnviarCorreos();
-
+		windowSelection = new VentanaSelectionSort();
+		
+		
 		addListeners();
 	}
 
@@ -84,6 +89,7 @@ public class Controller implements ActionListener { // ItemListener {
 		stadisticWindow.getModifyP().addActionListener(this);
 		stadisticWindow.getVolverEs().addActionListener(this);
 
+		windowSelection.getVolver().addActionListener(this);
 	}
 
 
@@ -144,7 +150,11 @@ public class Controller implements ActionListener { // ItemListener {
 
 			}		
 			if(comand.equals("mostrarAsc")) { //boton de organizar ascen
-
+				stadisticWindow.setVisible(false);
+				mainWindow.setVisible(false);
+				menuWindow.setVisible(false);
+				adminWindow.setVisible(false);
+				windowSelection.setVisible(true);
 			}
 			if(comand.equals("mostrarDEC")) { //boton de organizar dez
 
@@ -174,6 +184,8 @@ public class Controller implements ActionListener { // ItemListener {
 				mainWindow.setVisible(false);
 				menuWindow.setVisible(false);
 				adminWindow.setVisible(true);
+				windowSelection.setVisible(false);
+
 			}
 
 			//Esto se refiere al borrar user
@@ -192,6 +204,14 @@ public class Controller implements ActionListener { // ItemListener {
 					//JOptionPane.showMessageDialog(, e);
 					floatingWindow.mostrarInfo("Not deleted");
 				}
+			}
+			
+			if(comand.equals("VolverSelection")) {
+				stadisticWindow.setVisible(false);
+				mainWindow.setVisible(false);
+				menuWindow.setVisible(false);
+				adminWindow.setVisible(true);
+				windowSelection.setVisible(false);
 			}
 
 
