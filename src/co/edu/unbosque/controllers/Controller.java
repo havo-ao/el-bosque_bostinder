@@ -105,19 +105,19 @@ public class Controller implements ActionListener { // ItemListener {
 				mainWindow.setVisible(false);
 				registerWindow.setVisible(true);
 
-				//JOptionPane.showInputDialog(null,"en proceso");
-				//				floatingWindow.mostrarInfo("Procesoo");
+				
 			}
 			if (comand.equals("usuario")) { // la de usuarios
 				mainWindow.setVisible(false);
-				JOptionPane.showInputDialog(null, "en proceso");
+			//	JOptionPane.showInputDialog(null, "en proceso");
 
 			}
 
-			if (comand.equals("Volver1")) {
-				//	JOptionPane.showInputDialog(null,"en proceso");
-				floatingWindow.mostrarInfo("Proceso");
-			}
+//			if (comand.equals("Volver1")) {
+//				//	JOptionPane.showInputDialog(null,"en proceso");
+//				//floatingWindow.mostrarInfo("Proceso");
+//				
+//			}
 
 			if(comand.equals("Volver1")) {
 				mainWindow.setVisible(true);
@@ -205,7 +205,7 @@ public class Controller implements ActionListener { // ItemListener {
 
 		} catch (Exception e2) {
 			//lo de las vainas flotantes
-			JOptionPane.showMessageDialog(null,"ERROR", "OJO!",JOptionPane.ERROR_MESSAGE);
+		floatingWindow.mostrarError("Something failed");
 			//		e2.printStackTrace();
 		}
 	}

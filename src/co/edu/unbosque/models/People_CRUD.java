@@ -51,8 +51,7 @@ public class People_CRUD implements People_CRUD_Interface{
 
 	@Override
 	public boolean modify(People prevUser, People nextUser, ArrayList<People> usersList) {
-		boolean modified = false;
-
+		boolean modified = false; 
 		if (prevUser != null) {
 			delete(prevUser.getUserName(), usersList);
 			create(nextUser, usersList);

@@ -1,4 +1,4 @@
-package PruebasUnitarias;
+package co.edu.unbosque.test;
 
 import static org.junit.Assert.*;
 
@@ -12,10 +12,10 @@ public class InsertTest {
 		System.out.println(" Before");
 	}
 
-	@Test
-	public void test() {
-		//fail("Not yet implemented");
-		System.out.println("is testing");
-	}
+//	@Test
+//	public void test() {
+//		//fail("Not yet implemented");
+//		System.out.println("is testing");
+//	}
 
 }
