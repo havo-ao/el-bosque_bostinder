@@ -3,7 +3,7 @@
  */
 package co.edu.unbosque.views;
 /**
- * Se genera cuando se llama al código que depende de un teclado,
+ * Se genera cuando se llama al cï¿½digo que depende de un teclado,
  *  una pantalla o un mouse en un entorno que no admite un teclado, una pantalla o un mouse.
  */
 import java.awt.Color;
@@ -55,7 +55,7 @@ public class VentanaMenu extends JFrame{
 		setContentPane(pim);
 
 		user = new JButton("USER");
-		user.setActionCommand("usuario");
+		user.setActionCommand("userLogin");
 		//user.setEnabled(false);
 		user.setBackground(new Color(22, 20, 20));
 		user.setForeground(new Color(255,255,255));
@@ -63,15 +63,15 @@ public class VentanaMenu extends JFrame{
 		user.setBounds(40,40,130,65);
 		add(user);
 
-		admin = new JButton("ADMIN");
-		admin.setActionCommand("adminis");
+		admin = new JButton("Administrador");
+		admin.setActionCommand("adminLogin");
 		admin.setBackground(new Color(22, 20, 20));
 		admin.setForeground(new Color(255,255,255));
 		admin.setFont(new Font("Calisto MT",Font.BOLD,25));
 		admin.setBounds(550,350,130,50);
 		add(admin);
 
-		volver = new JButton("Return");
+		volver = new JButton("Volver");
 		volver.setActionCommand("Volver1");
 		volver.setBackground(new Color(22, 20, 20));
 		volver.setForeground(new Color(255,255,255));
