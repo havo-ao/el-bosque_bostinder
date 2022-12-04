@@ -4,37 +4,77 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
+/**
+ * Clase donde se encuentran los metodos para la creacion estandar de componentes graficos.
+ * @author Andr閟 Ca耋n, Sof韆 Morales, Camilo Silva, Bryan Gafaro
+ *
+ */
 public class Components {
 
-	// Funci贸n para agregar botones est谩ndar
+	/**
+	 * Metodo paara agregar botones estandar.
+	 * <b>pre</b> Se debe ingresar todos los valores requeridos. <br>
+	 * <b>post</b> Se ajustan los valores para todo los botones. <br>
+	 * @param button es un boton estandar. button != null, button != " ". <br>
+	 * @param text es el area de texto dentro el boton. text != null, text != " ". <br>
+	 * @param x es la posici髇 en x predeterminada para el bot髇. x != null, x != " ". <br>
+	 * @param y es la posici髇 en y predeterminada para el bot髇. y != null, y != " ". <br>
+	 * @param width es la anchura predeterminada para el bot髇. width != null, width != " ". <br>
+	 * @param height es la altura predeterminada para el bot髇. height != null, height != " ". <br>
+	 * @return Regresa los valores para todos los botones.
+	 */
 	public JButton addButton(JButton button, String text, int x, int y, int width, int height) {
 
-		button.setText(text); // Asignar texto al bot贸n
-		button.setBounds(x, y, width, height); // Asignar ubicaci贸n y tama帽o al bot贸n
-		return button; // Devolver bot贸n componente
+		button.setText(text); 
+		button.setBounds(x, y, width, height); 
+		return button; 
 	}
 
-	// Funci贸n para agregar labeles est谩ndar
+	
+	/**
+	 * Metodo para a馻dir labels.
+	 * <b>pre</b> Se debe ingresar todos los valores requeridos. <br>
+	 * <b>post</b> Se ajustan los valores para todo los labels. <br>
+	 * @param label es un label estandar. label != null, label != " ". <br>
+	 * @param text es el area de texto dentro el boton. text != null, text != " ". <br>
+	 * @param x es la posici髇 en x predeterminada para el bot髇. x != null, x != " ". <br>
+	 * @param y es la posici髇 en y predeterminada para el bot髇. y != null, y != " ". <br>
+	 * @param width es la anchura predeterminada para el bot髇. width != null, width != " ". <br>
+	 * @param height es la altura predeterminada para el bot髇. height != null, height != " ". <br>
+	 * @param aligment
+	 * @param imagePath
+	 * @return Regresa los valores para todos los labels.
+	 */
 	public JLabel addLabel(JLabel label, String text, int x, int y, int width, int height, int aligment,
 			String imagePath) {
 
-		label.setText(text); // Asignar texto al label
-		label.setBounds(x, y, width, height); // Asignar ubicaci贸n y tama帽o al label
-		label.setHorizontalAlignment(aligment); // Asignar orientaci贸n vertical del texto
+		label.setText(text); 
+		label.setBounds(x, y, width, height); 
+		label.setHorizontalAlignment(aligment); 
 
-		// Validar si se trata de una imagen
+		
 		if (!imagePath.equals(""))
-			label.setIcon(new ImageIcon(imagePath)); // Asignar path de imagen al label
+			label.setIcon(new ImageIcon(imagePath)); 
 
-		return label; // Devolver label componente
+		return label; 
 	}
 
-	// Funci贸n para agregar inputs de texto est谩ndar
+	/**
+	 * Metodo para agregar entradas de textos estandar.
+	 * <b>pre</b> Se debe ingresar todos los valores requeridos. <br>
+	 * <b>post</b> Se ajustan los valores para todo las entradas de texto. <br> 
+	 * @param textInput es un entrada de texto estandar. textInput != null, textInput != " ". <br>
+	 * @param text es el area de texto dentro el boton. text != null, text != " ". <br>
+	 * @param x es la posici髇 en x predeterminada para el bot髇. x != null, x != " ". <br>
+	 * @param y es la posici髇 en y predeterminada para el bot髇. y != null, y != " ". <br>
+	 * @param width es la anchura predeterminada para el bot髇. width != null, width != " ". <br>
+	 * @param height es la altura predeterminada para el bot髇. height != null, height != " ". <br>
+	 * @return Regresa los valores para todos las entradas de texto.
+	 */
 	public JTextField addTextInput(JTextField textInput, String text, int x, int y, int width, int height) {
 
-		textInput.setText(text); // Asignar texto al input
-		textInput.setBounds(x, y, width, height); // Asignar unicaci贸n y tama帽o al input
-		return textInput; // Devolver input text componente
+		textInput.setText(text);
+		textInput.setBounds(x, y, width, height); 
+		return textInput; 
 	}
 }

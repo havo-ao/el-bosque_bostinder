@@ -1,20 +1,35 @@
 package co.edu.unbosque.views;
 
 import java.awt.Color;
+
 import java.awt.Font;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
-
+/**
+ * Esta es la clase de la ventana del perfil del administrador. <br>
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ *
+ */
 public class VentanaAdmin extends JFrame{ //hereda de ...
-
+	/**
+	 * Objetos stadistic, delete,show_asc,show_dec,filter, de tipo JButton. 
+	 */
 	private JButton stadistic, delete,show_asc,show_dec,filter;
+	/**
+	 * Objetos exit2, volver_adm de tipo JButton.
+	 */
 	private JButton exit2, volver_adm;
-	private  PanelImagenAdmin pad;
+	/**
+	 * Objeto pad de tipo PanelImagenAdmin.
+	 */
+	private PanelImagenAdmin pad;
 	
 	/**
-	 * 
+	 * Metodo que crea e inicializa la ventana del administrador. 
+	 * <b>pre</b> Se hace el llamado de la clase. <br>
+	 * <b>post</b> Se ha inicializado la ventana del administrador. <br>
 	 */
 	public VentanaAdmin() {
 		setSize(746, 596); 
@@ -27,7 +42,11 @@ public class VentanaAdmin extends JFrame{ //hereda de ...
 
 		setVisible(false);
 	}
-
+	/**
+	 * Metodo que permite iniciliar los componentes graficos de la clase
+	 * <b>pre</b> Los objetos debieron ser creados previamente. <br>
+	 * <b>post</b> Se inicializa cada componente de la clase. <br>
+	 */
 	public void inicializar() {
 		pad = new PanelImagenAdmin();
 		pad.setBorder(new EmptyBorder(5,5,5,5));
@@ -108,67 +127,147 @@ public class VentanaAdmin extends JFrame{ //hereda de ...
 		
 		
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto stadistic de tipo JButton. <br>
+	 */
 	public JButton getStadistic() {
 		return stadistic;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable <br>
+	 * @param stadistic es el botón para acceder a ls estadisitcas. stadistic != null, stadistic != " ". <br>
+	 */
 	public void setStadistic(JButton stadistic) {
 		this.stadistic = stadistic;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto delete de tipo JButton. <br>
+	 */
 	public JButton getDelete() {
 		return delete;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable <br>
+	 * @param delete es el botón para eliminar un usuario. delete != null, delete != " ". <br>
+	 */
 	public void setDelete(JButton delete) {
 		this.delete = delete;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto show_asc JButton. <br>
+	 */
 	public JButton getShow_asc() {
 		return show_asc;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable <br>
+	 * @param show_asc es el botón para mostrar los usuarios de forma ascendente. show_asc != null, show_asc != " ". <br>
+	 */
 	public void setShow_asc(JButton show_asc) {
 		this.show_asc = show_asc;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto show_asc JButton. <br>
+	 */
 	public JButton getShow_dec() {
 		return show_dec;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @param show_dec es el botón para mostrar los usuarios de forma descendente. show_dec != null, show_dec != " ". <br>
+	 */
 	public void setShow_dec(JButton show_dec) {
 		this.show_dec = show_dec;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto filter JButton. <br>
+	 */
 	public JButton getFilter() {
 		return filter;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @param filter es el botón para filtrar los usuarios. filter != null, filter != " ". <br>
+	 */
 	public void setFilter(JButton filter) {
 		this.filter = filter;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto pad JButton. <br>
+	 */
 	public PanelImagenAdmin getPad() {
 		return pad;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @param pad es el botón para los usuarios. pad != null, pad != " ". <br>
+	 */
 	public void setPad(PanelImagenAdmin pad) {
 		this.pad = pad;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto exit2 JButton. <br>
+	 */
 	public JButton getExit2() {
 		return exit2;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @param exit2 es el botón para los usuarios. exit2 != null, exit2 != " ". <br>
+	 */
 	public void setExit2(JButton exit2) {
 		this.exit2 = exit2;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto volver_adm JButton. <br>
+	 */
 	public JButton getVolver_adm() {
 		return volver_adm;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @param volver_adm es el botón para los usuarios. exit2 != null, exit2 != " ". <br>
+	 */
 	public void setVolver_adm(JButton volver_adm) {
 		this.volver_adm = volver_adm;
 	}

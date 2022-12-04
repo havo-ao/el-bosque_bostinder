@@ -10,30 +10,37 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 /**
  * Esta clase sirve para poner la imagen de fondo
- * @author Sofia Morales
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
  *
  */
 public class PanelImagenFondo extends JPanel implements PanelImagenI{
 	/**
-	 *  Variable tipo Dimension
+	 *  Variable tam de tipo Dimension
 	 */
 	private Dimension tam; 
 	/**
-	 *  Variable tipo ImageIcon
+	 *  Variable img_fon de tipo ImageIcon
 	 */
 	private ImageIcon img_fon;
 	/**
-	 *  Variable tipo JLabel
+	 *  Variable label de tipo JLabel
 	 */
 	private JLabel label;
 	/**
-	 * Metodo constructor de panelImagenFondo
+	 * Metodo que crea e inicializa el panel PanelImagenFondo. 
+	 * <b>pre</b> Se hace el llamado de la clase. <br>
+	 * <b>post</b> Se ha inicializado el panel PanelImagenFondo. <br>
 	 */
 	public PanelImagenFondo() {
-		this.setSize(getPreferredSize()); //esto es pa que se ajuste
+		this.setSize(getPreferredSize()); 
 	}
 
 	@Override
+	/**
+	 * Este metodo se encarga de poner la imagen d fondo.
+	 * <b>pre</b> La imagen que se va a utilizar debe estar en la carpeta. <br>
+	 * <b>post</b> La imagen se ha colocado de fondo. <br>
+	 */
 	public void paintComponent(Graphics g) { //este metodo es para ponerla de fonde
 		Dimension tam = getSize();
 		img_fon = new ImageIcon(getClass().getResource("/imagenes/fondo.png"));
@@ -41,27 +48,57 @@ public class PanelImagenFondo extends JPanel implements PanelImagenI{
 		setOpaque(false); 
 		super.paintComponent(g);
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto tam de tipo Dimension. <br>
+	 */
 	public Dimension getTam() {
 		return tam;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable <br>
+	 * @param tam es dimension de la imagen. tam != null, tam != " ". <br>
+	 */
 	public void setTam(Dimension tam) {
 		this.tam = tam;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable <br>
+	 * @return Regresa el objeto img_fon de tipo ImageIcon. <br>
+	 */
 	public ImageIcon getImg_fon() {
 		return img_fon;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable <br>
+	 * @param img_fon es la imagen de fondo. img_fon != null, img_fon != " ". <br>
+	 */
 	public void setImg_fon(ImageIcon img_fon) {
 		this.img_fon = img_fon;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable <br>
+	 * @return Regresa el objeto label de tipo JLabel. <br>
+	 */
 	public JLabel getLabel() {
 		return label;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable <br>
+	 * @param label es el JLabel que almacenará la imagen de fondo. label != null, label != " ". <br>
+	 */
 	public void setLabel(JLabel label) {
 		this.label = label;
 	}

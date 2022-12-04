@@ -7,31 +7,36 @@ package co.edu.unbosque.views;
  *  una pantalla o un mouse en un entorno que no admite un teclado, una pantalla o un mouse.
  */
 import java.awt.Color;
+
 import java.awt.Font;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
 /**
- * Esta clase corresponde a la Ventana del Menu
- * @author Sofia Morales
+
+ * Esta es la clase de la ventana del menu del programa. <br>
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
  *
  */
 public class VentanaMenu extends JFrame{
 	/**
-	 * Encapsulo pim 
+	 * Objeto pim de tipo PanelImgGuia. <br>
 	 */
 	private PanelImgGuia pim;
 	/**
-	 * Encapsulo admin
+	 * Objeto admin de tipo JButton. <br>
 	 */
 	private JButton admin; 
 	/**
-	 * Encapsulo user y volver
+	 * Objeto user y volver de tipo JButton. <br>
 	 */
 	private JButton user, volver;
+	
 	/**
-	 * Metodo constructor de la Ventana menu, aqui se inicializa
+	 * Metodo que crea e inicializa la ventana del menú. <br>
+	 * <b>pre</b> Se hace el llamado de la clase. <br>
+	 * <b>post</b> Se ha inicializado la ventana del menú. <br>
 	 */
 	public VentanaMenu() {
 
@@ -46,7 +51,9 @@ public class VentanaMenu extends JFrame{
 		setVisible(false);
 	}
 	/**
-	 * 
+	 * Metodo que permite iniciliar los componentes graficos de la clase
+	 * <b>pre</b> Los objetos debieron ser creados previamente. <br>
+	 * <b>post</b> Se inicializa cada componente de la clase. <br>
 	 */
 	public void inicializar() {
 		pim = new PanelImgGuia();
@@ -79,49 +86,75 @@ public class VentanaMenu extends JFrame{
 		volver.setBounds(600,500,100,50);
 		add(volver);
 	}
-
-
-
-
-
-
-
 	/**
-	 * 
-	 * @return
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto de tipo PanelImgGuia, nombrado como pim. <br>
 	 */
-
 	public PanelImgGuia getPim() {
 		return pim;
 	}
 	/**
-	 * 
-	 * @param pim
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable. <br>
+	 * @param pim es el es el panel del imagen de fondo. pim != null, pim != " ". <br>
 	 */
 	public void setPim(PanelImgGuia pim) {
 		this.pim = pim;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto de tipo JButton, nombrado como admin. <br>
+	 */
 	public JButton getAdmin() {
 		return admin;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable. <br>
+	 * @param admin es el botón para acceder al perfil del administrador. admin != null, admin != " ". <br>
+	 */
 	public void setAdmin(JButton admin) {
 		this.admin = admin;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Rgeresa el objeto user de tipo JButton. <br>
+	 */
 	public JButton getUser() {
 		return user;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable. <br>
+	 * @param user es el botón para acceder al perfil del usuario. user != null, user != " ". <br>
+	 */
 	public void setUser(JButton user) {
 		this.user = user;
 	}
-
+	/**
+	 * Este metodo permite que otras clases accedan a esta variable y a su valor. <br>
+	 * <b>pre</b> la variable esta instanciada e inicializada. <br>
+	 * <b>post</b> Brindar su valor actual. <br>
+	 * @return Regresa el objeto volver de tipo JButton. <br>
+	 */
 	public JButton getVolver() {
 		return volver;
 	}
-
+	/**
+	 * Este metodo permite setear el valor de la variable. <br>
+	 * <b>pre</b> la variable debe estar inicializada. <br>
+	 * <b>post</b> Se asigna un nuevo valor a la variable. <br>
+	 * @param volver es el botón para retrocedder a la ventana principal. volver != null, volver != " ". <br>
+	 */
 	public void setVolver(JButton volver) {
 		this.volver = volver;
 	}

@@ -26,26 +26,57 @@ import co.edu.unbosque.views.VentanaMenu;
 import co.edu.unbosque.views.VentanaPrincipal;
 import co.edu.unbosque.views.VentanaStadistics;
 
-public class Controller implements ActionListener { // ItemListener {
-
+/**
+ * Clase Controller, que se encarga de conectar el view y el model
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ *
+ */
+public class Controller implements ActionListener{ //ItemListener {
+	/**
+	 * Objeto mainWindow de tipo VentanaPrincipal.
+	 */
 	private VentanaPrincipal mainWindow;
-
+	/**
+	 * Objeto menuWindow de tipo VentanaMenu.
+	 */
 	private VentanaMenu menuWindow;
-
+	/**
+	 * Objeto adminWindow de tipo VentanaAdmin.
+	 */
 	private VentanaAdmin adminWindow;
+	/**
+	 * Objeto registerWindow de tipo RegisterWindow.
+	 */
 	private RegisterWindow registerWindow;
-
+	/**
+	 * Objeto peopleDao de tipo People_CRUD.
+	 */
 	private People_CRUD peopleDao;
-
+	/**
+	 * Objeto app_DTO de tipo App_DTO.
+	 */
 	private App_DTO app_DTO;
-
+	/**
+	 * Objeto floatingWindow de tipo Messages.
+	 */
 	private Messages floatingWindow;
-
+	/**
+	 * Objeto stadisticWindow de tipo VentanaStadistics.
+	 */
 	private VentanaStadistics stadisticWindow;
-
+	/**
+	 * Objeto userWindowApp de tipo UserWindowApp.
+	 */
 	private UserWindowApp  userWindowApp;
-	//private PanelImagenPersona panelPersona;
+	/**
+	 * Objeto sendEmail de tipo EnviarCorreos
+	 */
 	private EnviarCorreos sendEmail;
+	/**
+	 * Metodo constructor de la clase donde se incializan los objetos.
+	 * <b>pre</b> Los objetos debieron ser creados dentro de la clase previamente. <br>
+	 * <b>post</b> Los objetos fueron inicializados.
+	 */
 	public Controller() {
 		mainWindow = new VentanaPrincipal();
 		menuWindow = new VentanaMenu();
@@ -63,6 +94,12 @@ public class Controller implements ActionListener { // ItemListener {
 		addListeners();
 	}
 
+//	
+	/**
+	 * Este metodo proporcina los Listeners a los objetos.
+	 * <b>pre</b> Los objetos debieron ser previamente inicializados. <br>
+	 * <b>post</b> Se les asignó a cada objeto un ActionListener. <br>
+	 */
 	public void addListeners() {
 		mainWindow.getRegister().addActionListener(this);
 		mainWindow.getLog().addActionListener(this);
@@ -83,11 +120,17 @@ public class Controller implements ActionListener { // ItemListener {
 		stadisticWindow.getEstadisticaPersonal().addActionListener(this);
 		stadisticWindow.getModifyP().addActionListener(this);
 		stadisticWindow.getVolverEs().addActionListener(this);
+		
 
 	}
 
 
 	@Override
+	/**
+	 * Metodo que se encarga de capturar los eventos.
+	 * <b>pre</b> Los objetos deben estar inicializados. <br>
+	 * <b>post</b> Se capturan los eventos y se aplican. <br>
+	 */
 	public void actionPerformed(ActionEvent e) {
 
 		String comand = e.getActionCommand();
@@ -165,8 +208,8 @@ public class Controller implements ActionListener { // ItemListener {
 
 			}
 			if(comand.equals("modify")) { //Lo de modificar usuario 
-				//	stadisticWindow.setVisible(true);
-				//	People = new People(comand, comand, comand, comand, comand, comand, null, 0)
+					stadisticWindow.setVisible(false);
+//					People = new People(comand, comand, comand, comand, comand, comand, null, 0)
 
 			}
 			if(comand.equals("volverEstadistic1")) { //Lo de mostrar las esst
@@ -193,14 +236,6 @@ public class Controller implements ActionListener { // ItemListener {
 					floatingWindow.mostrarInfo("Not deleted");
 				}
 			}
-
-
-
-
-
-
-
-
 
 
 		} catch (Exception e2) {
