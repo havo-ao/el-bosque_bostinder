@@ -38,7 +38,6 @@ public class RegisterWindow extends JFrame {
 	private JTextField txtName = new JTextField();
 	private JTextField txtLastNameOne = new JTextField();
 	private JTextField txtLastNameTwo = new JTextField();
-	private JTextField txtAge = new JTextField();
 	private JTextField txtPass = new JTextField();
 	private JTextField txtConfirmPass = new JTextField();
 	private JTextField txtDivorces = new JTextField();
@@ -63,7 +62,7 @@ public class RegisterWindow extends JFrame {
 	// Constructor of Register Window
 	public RegisterWindow() {
 
-		setSize(880, 740);
+		setSize(880, 760);
 		setTitle("Agregar productos");
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -83,7 +82,8 @@ public class RegisterWindow extends JFrame {
 	// Function to add labels
 	private void addLabels() {
 		// Banner
-		add(components.addLabel(lblBanner, "", 0, 0, 880, 140, SwingConstants.LEFT, "src/imagenes/logo_bostinder_880.png"));
+		add(components.addLabel(lblBanner, "", 0, 0, 880, 160, SwingConstants.LEFT,
+				"src/imagenes/logo_bostinder_880.png"));
 
 		// Col 1
 		add(components.addLabel(lblUsername, "Nombre de usuario", getCol(1), getRow(1), defaultWidth, defaultHeight,
@@ -96,8 +96,8 @@ public class RegisterWindow extends JFrame {
 				SwingConstants.LEFT, ""));
 		add(components.addLabel(lblLastNameTwo, "Segundo Apellido", getCol(1), getRow(5), defaultWidth, defaultHeight,
 				SwingConstants.LEFT, ""));
-		add(components.addLabel(lblAge, "Fecha de Nacimiento", getCol(1), getRow(6), defaultWidth, defaultHeight, SwingConstants.LEFT,
-				""));
+		add(components.addLabel(lblAge, "Fecha de Nacimiento", getCol(1), getRow(6), defaultWidth, defaultHeight,
+				SwingConstants.LEFT, ""));
 		add(components.addLabel(lblPass, "Contraseña", getCol(1), getRow(7), defaultWidth, defaultHeight,
 				SwingConstants.LEFT, ""));
 		add(components.addLabel(lblConfirmPass, "Confirmar Contraseña", getCol(1), getRow(8), defaultWidth,
@@ -142,21 +142,23 @@ public class RegisterWindow extends JFrame {
 
 	// Function to add ComboBoxes
 	private void addComboBoxes() {
-		cmbGender.setBounds(getCol(4), getRow(1), defaultWidth, defaultHeight);
+		cmbGender.setBounds(getCol(4) - 20, getRow(1), defaultWidth + 20, defaultHeight);
 		cmbGender.addItem("Hombre");
 		cmbGender.addItem("Mujer");
 		add(cmbGender);
 
-		cmbBirthDay.setBounds(getCol(2), getRow(6), 70, defaultHeight);
+		cmbBirthDay.setBounds(getCol(2) - 20, getRow(6), 70, defaultHeight);
 		for (int day = 1; day <= 31; day++) {
 			cmbBirthDay.addItem(String.valueOf(day));
 		}
+		((JLabel) cmbBirthDay.getRenderer()).setHorizontalAlignment(SwingConstants.RIGHT);
 		add(cmbBirthDay);
 
-		cmbBirthMonth.setBounds(getCol(2) + 60, getRow(6), 70, defaultHeight);
+		cmbBirthMonth.setBounds(getCol(2) + 50, getRow(6), 70, defaultHeight);
 		for (int month = 1; month <= 12; month++) {
 			cmbBirthMonth.addItem(String.valueOf(month));
 		}
+		((JLabel) cmbBirthMonth.getRenderer()).setHorizontalAlignment(SwingConstants.RIGHT);
 		add(cmbBirthMonth);
 
 		int todayYear = 2022;
@@ -165,6 +167,7 @@ public class RegisterWindow extends JFrame {
 		for (int year = todayYear; year >= todayYear - maxAge; year--) {
 			cmbBirthYear.addItem(String.valueOf(year));
 		}
+		((JLabel) cmbBirthYear.getRenderer()).setHorizontalAlignment(SwingConstants.RIGHT);
 		add(cmbBirthYear);
 	}
 
@@ -180,7 +183,7 @@ public class RegisterWindow extends JFrame {
 
 	// Function to get row number by integer
 	private int getRow(int row) {
-		return 160 + ((row - 1) * (defaultHeight + paddingY));
+		return 180 + ((row - 1) * (defaultHeight + paddingY));
 	}
 
 	// Function to get col number by integer
