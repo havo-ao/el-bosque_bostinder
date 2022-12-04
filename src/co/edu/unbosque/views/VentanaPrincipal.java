@@ -8,6 +8,11 @@ import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
 
 public class VentanaPrincipal extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	private PanelImagenFondo pimg;
 	private JButton register;
 	private JButton log;
@@ -46,7 +51,7 @@ public class VentanaPrincipal extends JFrame {
 		add(register);
 		
 		log = new JButton("Log in");
-		log.setActionCommand("logging"); //poderlo usar despues
+		log.setActionCommand("goTologin"); //poderlo usar despues
 	//	log.setEnabled(true);//poder interactuar
 		log.setFocusPainted(true); //para pintar
 		log.setBorderPainted(true);

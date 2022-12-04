@@ -1,5 +1,6 @@
 package co.edu.unbosque.views;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -63,7 +64,7 @@ public class RegisterWindow extends JFrame {
 	public RegisterWindow() {
 
 		setSize(880, 760);
-		setTitle("Agregar productos");
+		setTitle("Registrar nuevo usuario");
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
@@ -119,8 +120,7 @@ public class RegisterWindow extends JFrame {
 
 		// Col 4
 		add(components.addLabel(lblPhoto, "", getCol(4), getRow(7), defaultWidth, (defaultHeight * 4) + (paddingY * 3),
-				SwingConstants.LEFT, "src/imagenes/person_gray.png"));
-
+				SwingConstants.CENTER, "src/imagenes/person_woman.png"));
 	}
 
 	// Function to add Inputs
@@ -173,12 +173,17 @@ public class RegisterWindow extends JFrame {
 
 	// Function to add Buttons
 	private void addButtons() {
-		// Col 3
-		add(components.addButton(btnPhoto, "Subir foto", getCol(3), getRow(8), defaultWidth, defaultHeight));
-		add(components.addButton(btnRegister, "Registrarse", getCol(3), getRow(11), defaultWidth, defaultHeight));
 
-		// Col 4
-		add(components.addButton(btnBack, "Volver", getCol(4), getRow(11), defaultWidth, defaultHeight));
+		/*
+		 * add(components.addButton(btnPhoto, "Subir foto", getCol(3), getRow(8),
+		 * defaultWidth, defaultHeight)); btnPhoto.setActionCommand("uploadPhoto");
+		 */
+
+		add(components.addButton(btnRegister, "Registrarse", getCol(4), getRow(11), defaultWidth, defaultHeight));
+		btnRegister.setActionCommand("registerUser");
+
+		add(components.addButton(btnBack, "Volver", getCol(3), getRow(11), defaultWidth, defaultHeight));
+		btnBack.setActionCommand("backToLoginRegister");
 	}
 
 	// Function to get row number by integer
@@ -189,6 +194,302 @@ public class RegisterWindow extends JFrame {
 	// Function to get col number by integer
 	private int getCol(int col) {
 		return 30 + ((col - 1) * (defaultWidth + paddingX));
+	}
+
+	public void genderEvents(String registerGender) {
+		if (registerGender.equals("Mujer")) {
+			getLblWomen().setEnabled(true);
+			getLblDivorces().setEnabled(true);
+			getTxtDivorces().setEnabled(true);
+
+			getLblMen().setEnabled(false);
+			getLblIncome().setEnabled(false);
+			getLblHeight().setEnabled(false);
+			getTxtHeight().setEnabled(false);
+			getTxtHeight().setText("");
+			getTxtIncome().setEnabled(false);
+			getTxtIncome().setText("");
+			
+			lblPhoto.setIcon(new ImageIcon("src/imagenes/person_woman.png"));
+		} else {
+			getLblMen().setEnabled(true);
+			getLblIncome().setEnabled(true);
+			getLblHeight().setEnabled(true);
+			getTxtHeight().setEnabled(true);
+			getTxtIncome().setEnabled(true);
+
+			getLblWomen().setEnabled(false);
+			getLblDivorces().setEnabled(false);
+			getTxtDivorces().setEnabled(false);
+			getTxtDivorces().setText("");
+			
+			lblPhoto.setIcon(new ImageIcon("src/imagenes/person_man.png"));
+
+		}
+	}
+
+	public JLabel getLblBanner() {
+		return lblBanner;
+	}
+
+	public void setLblBanner(JLabel lblBanner) {
+		this.lblBanner = lblBanner;
+	}
+
+	public JLabel getLblUsername() {
+		return lblUsername;
+	}
+
+	public void setLblUsername(JLabel lblUsername) {
+		this.lblUsername = lblUsername;
+	}
+
+	public JLabel getLblEmail() {
+		return lblEmail;
+	}
+
+	public void setLblEmail(JLabel lblEmail) {
+		this.lblEmail = lblEmail;
+	}
+
+	public JLabel getLblName() {
+		return lblName;
+	}
+
+	public void setLblName(JLabel lblName) {
+		this.lblName = lblName;
+	}
+
+	public JLabel getLblLastNameOne() {
+		return lblLastNameOne;
+	}
+
+	public void setLblLastNameOne(JLabel lblLastNameOne) {
+		this.lblLastNameOne = lblLastNameOne;
+	}
+
+	public JLabel getLblLastNameTwo() {
+		return lblLastNameTwo;
+	}
+
+	public void setLblLastNameTwo(JLabel lblLastNameTwo) {
+		this.lblLastNameTwo = lblLastNameTwo;
+	}
+
+	public JLabel getLblAge() {
+		return lblAge;
+	}
+
+	public void setLblAge(JLabel lblAge) {
+		this.lblAge = lblAge;
+	}
+
+	public JLabel getLblPass() {
+		return lblPass;
+	}
+
+	public void setLblPass(JLabel lblPass) {
+		this.lblPass = lblPass;
+	}
+
+	public JLabel getLblConfirmPass() {
+		return lblConfirmPass;
+	}
+
+	public void setLblConfirmPass(JLabel lblConfirmPass) {
+		this.lblConfirmPass = lblConfirmPass;
+	}
+
+	public JLabel getLblGender() {
+		return lblGender;
+	}
+
+	public void setLblGender(JLabel lblGender) {
+		this.lblGender = lblGender;
+	}
+
+	public JLabel getLblWomen() {
+		return lblWomen;
+	}
+
+	public void setLblWomen(JLabel lblWomen) {
+		this.lblWomen = lblWomen;
+	}
+
+	public JLabel getLblDivorces() {
+		return lblDivorces;
+	}
+
+	public void setLblDivorces(JLabel lblDivorces) {
+		this.lblDivorces = lblDivorces;
+	}
+
+	public JLabel getLblMen() {
+		return lblMen;
+	}
+
+	public void setLblMen(JLabel lblMen) {
+		this.lblMen = lblMen;
+	}
+
+	public JLabel getLblIncome() {
+		return lblIncome;
+	}
+
+	public void setLblIncome(JLabel lblIncome) {
+		this.lblIncome = lblIncome;
+	}
+
+	public JLabel getLblHeight() {
+		return lblHeight;
+	}
+
+	public void setLblHeight(JLabel lblHeight) {
+		this.lblHeight = lblHeight;
+	}
+
+	public JLabel getLblPhoto() {
+		return lblPhoto;
+	}
+
+	public void setLblPhoto(JLabel lblPhoto) {
+		this.lblPhoto = lblPhoto;
+	}
+
+	public JTextField getTxtUsername() {
+		return txtUsername;
+	}
+
+	public void setTxtUsername(JTextField txtUsername) {
+		this.txtUsername = txtUsername;
+	}
+
+	public JTextField getTxtEmail() {
+		return txtEmail;
+	}
+
+	public void setTxtEmail(JTextField txtEmail) {
+		this.txtEmail = txtEmail;
+	}
+
+	public JTextField getTxtName() {
+		return txtName;
+	}
+
+	public void setTxtName(JTextField txtName) {
+		this.txtName = txtName;
+	}
+
+	public JTextField getTxtLastNameOne() {
+		return txtLastNameOne;
+	}
+
+	public void setTxtLastNameOne(JTextField txtLastNameOne) {
+		this.txtLastNameOne = txtLastNameOne;
+	}
+
+	public JTextField getTxtLastNameTwo() {
+		return txtLastNameTwo;
+	}
+
+	public void setTxtLastNameTwo(JTextField txtLastNameTwo) {
+		this.txtLastNameTwo = txtLastNameTwo;
+	}
+
+	public JTextField getTxtPass() {
+		return txtPass;
+	}
+
+	public void setTxtPass(JTextField txtPass) {
+		this.txtPass = txtPass;
+	}
+
+	public JTextField getTxtConfirmPass() {
+		return txtConfirmPass;
+	}
+
+	public void setTxtConfirmPass(JTextField txtConfirmPass) {
+		this.txtConfirmPass = txtConfirmPass;
+	}
+
+	public JTextField getTxtDivorces() {
+		return txtDivorces;
+	}
+
+	public void setTxtDivorces(JTextField txtDivorces) {
+		this.txtDivorces = txtDivorces;
+	}
+
+	public JTextField getTxtIncome() {
+		return txtIncome;
+	}
+
+	public void setTxtIncome(JTextField txtIncome) {
+		this.txtIncome = txtIncome;
+	}
+
+	public JTextField getTxtHeight() {
+		return txtHeight;
+	}
+
+	public void setTxtHeight(JTextField txtHeight) {
+		this.txtHeight = txtHeight;
+	}
+
+	public JComboBox<String> getCmbGender() {
+		return cmbGender;
+	}
+
+	public void setCmbGender(JComboBox<String> cmbGender) {
+		this.cmbGender = cmbGender;
+	}
+
+	public JComboBox<String> getCmbBirthDay() {
+		return cmbBirthDay;
+	}
+
+	public void setCmbBirthDay(JComboBox<String> cmbBirthDay) {
+		this.cmbBirthDay = cmbBirthDay;
+	}
+
+	public JComboBox<String> getCmbBirthMonth() {
+		return cmbBirthMonth;
+	}
+
+	public void setCmbBirthMonth(JComboBox<String> cmbBirthMonth) {
+		this.cmbBirthMonth = cmbBirthMonth;
+	}
+
+	public JComboBox<String> getCmbBirthYear() {
+		return cmbBirthYear;
+	}
+
+	public void setCmbBirthYear(JComboBox<String> cmbBirthYear) {
+		this.cmbBirthYear = cmbBirthYear;
+	}
+
+	public JButton getBtnRegister() {
+		return btnRegister;
+	}
+
+	public void setBtnRegister(JButton btnRegister) {
+		this.btnRegister = btnRegister;
+	}
+
+	public JButton getBtnBack() {
+		return btnBack;
+	}
+
+	public void setBtnBack(JButton btnBack) {
+		this.btnBack = btnBack;
+	}
+
+	public JButton getBtnPhoto() {
+		return btnPhoto;
+	}
+
+	public void setBtnPhoto(JButton btnPhoto) {
+		this.btnPhoto = btnPhoto;
 	}
 
 }
