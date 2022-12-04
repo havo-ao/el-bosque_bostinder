@@ -20,7 +20,7 @@ public class Components {
 			String imagePath) {
 
 		label.setText(text); // Asignar texto al label
-		label.setBounds(x, y, width, height); // Asignar ubicación y tamaño al label
+		label.setBounds(x, y, width - 20, height); // Asignar ubicación y tamaño al label
 		label.setHorizontalAlignment(aligment); // Asignar orientación vertical del texto
 
 		// Validar si se trata de una imagen
@@ -34,7 +34,7 @@ public class Components {
 	public JTextField addTextInput(JTextField textInput, String text, int x, int y, int width, int height) {
 
 		textInput.setText(text); // Asignar texto al input
-		textInput.setBounds(x, y, width, height); // Asignar unicación y tamaño al input
+		textInput.setBounds(x - 20, y, width + 20, height); // Asignar unicación y tamaño al input
 		return textInput; // Devolver input text componente
 	}
 }
