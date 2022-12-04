@@ -3,7 +3,7 @@ package co.edu.unbosque.models;
 import java.time.LocalDate;
 /**
  * Clase men, que se extiende de la clase People.
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class Men extends People {

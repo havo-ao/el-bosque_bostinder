@@ -1,3 +1,6 @@
+/**
+ * Este paquete corresponde a la parte grafica
+ */
 package co.edu.unbosque.views;
 
 import javax.swing.JButton;
@@ -8,7 +11,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 /**
  * Clase de la ventana para el registro del usuario
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class RegisterWindow extends JFrame {

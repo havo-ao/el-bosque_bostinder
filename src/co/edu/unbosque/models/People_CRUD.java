@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  * Esta clase implementa la interface People_CRUD_Interface, para la persistencia.
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class People_CRUD implements People_CRUD_Interface {

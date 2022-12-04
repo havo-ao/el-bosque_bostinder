@@ -1,3 +1,6 @@
+/**
+ * Este paquete corresponde a la parte grafica
+ */
 package co.edu.unbosque.views;
 
 import java.awt.Dimension;

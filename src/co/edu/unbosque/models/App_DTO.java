@@ -3,7 +3,7 @@ package co.edu.unbosque.models;
 import java.util.ArrayList;
 /**
  * Esta clase se encarga de contener el ArrayList de los usuarios.<br>
- * @@author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @@author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class App_DTO {

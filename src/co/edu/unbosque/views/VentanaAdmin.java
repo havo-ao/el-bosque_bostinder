@@ -1,3 +1,6 @@
+/**
+ * Este paquete corresponde a la parte grafica
+ */
 package co.edu.unbosque.views;
 
 import java.awt.Color;
@@ -9,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.border.EmptyBorder;
 /**
  * Esta es la clase de la ventana del perfil del administrador. <br>
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class VentanaAdmin extends JFrame{ //hereda de ...

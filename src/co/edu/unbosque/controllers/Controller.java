@@ -1,3 +1,6 @@
+/**
+ * Este paquete conecta la parte graffica con el modelo
+ */
 package co.edu.unbosque.controllers;
 
 import java.awt.event.ActionEvent;
@@ -28,7 +31,7 @@ import co.edu.unbosque.views.VentanaStadistics;
 
 /**
  * Clase Controller, que se encarga de conectar el view y el model
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class Controller implements ActionListener{ //ItemListener {

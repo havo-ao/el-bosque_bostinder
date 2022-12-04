@@ -3,7 +3,7 @@ package co.edu.unbosque.models;
 import java.time.LocalDate;
 /**
  * Clase People donde se crea la información base de los usuarios.
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class People {

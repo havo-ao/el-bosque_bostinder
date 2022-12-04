@@ -16,7 +16,7 @@ import javax.swing.border.EmptyBorder;
 /**
 
  * Esta es la clase de la ventana del menu del programa. <br>
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class VentanaMenu extends JFrame{

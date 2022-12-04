@@ -1,7 +1,7 @@
 package co.edu.unbosque.models;
 /**
  * Clase donde se declaran las constantes. <br>
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class Constants {

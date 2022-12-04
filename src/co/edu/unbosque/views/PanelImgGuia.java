@@ -1,3 +1,6 @@
+/**
+ * Este paquete corresponde a la parte grafica
+ */
 package co.edu.unbosque.views;
 
 import java.awt.Dimension;
@@ -8,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 /**
  * 
- * @author sofia
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 

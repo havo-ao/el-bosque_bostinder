@@ -1,3 +1,6 @@
+/**
+ * Este paquete corresponde a la parte grafica
+ */
 package co.edu.unbosque.views;
 
 import javax.swing.JButton;
@@ -7,7 +10,7 @@ import javax.swing.JTextField;
 /**
  * 
  * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
- *
+ Gafaro
  */
 public class VentanaActualizar extends JFrame {
 	/**

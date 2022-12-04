@@ -3,7 +3,7 @@ package co.edu.unbosque.models;
 import java.util.ArrayList;
 /**
  * En esta interfacem se crea la carcasa de la logica. <br>
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public interface People_CRUD_Interface {

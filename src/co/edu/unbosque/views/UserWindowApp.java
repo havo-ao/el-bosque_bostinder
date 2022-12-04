@@ -1,3 +1,6 @@
+/**
+ * Este paquete corresponde a la parte grafica
+ */
 package co.edu.unbosque.views;
 
 import java.awt.BorderLayout;
@@ -9,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.border.EmptyBorder;
 /**
  * Esta clase es la Ventana de usuario
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class UserWindowApp extends JFrame {

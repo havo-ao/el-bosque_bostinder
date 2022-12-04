@@ -1,3 +1,6 @@
+/**
+ * Este paquete corresponde a la parte grafica
+ */
 package co.edu.unbosque.views;
 
 import java.awt.Color;
@@ -7,7 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 /**
  * Esta clase es la ventana de las estadisicas del programa. <br>
- * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Alfaro
+ * @author Andrés Cañón, Sofía Morales, Camilo Silva, Bryan Gafaro
  *
  */
 public class VentanaStadistics extends JFrame{
