@@ -75,4 +75,17 @@ public class People {
 		this.height = height;
 	}
 
+	
+//	
+//	@Override
+//	public String toString() {
+//		String res ="";
+//	//	res+=this.userName+","+this.email+","+this.status+","+this.gender+","+this.name+","+this.birthDate+","+this.height;
+//		res+=this.userName+","+this.name+","+this.birthDate;
+//		return res;	 
+//		
+//		//que pasa con la edad y el apellido?
+//	}
+
+
 }

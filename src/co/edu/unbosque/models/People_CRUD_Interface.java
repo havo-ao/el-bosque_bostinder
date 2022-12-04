@@ -8,7 +8,7 @@ public interface People_CRUD_Interface {
 	boolean delete(String userName, ArrayList<People> usersList);
 
 	boolean modify(People prevUser, People nextUser, ArrayList<People> usersList);
-	
+
 	People findByUserName(String userName, ArrayList<People> usersList);
 
 	boolean isUserExist(String userName, ArrayList<People> usersList);

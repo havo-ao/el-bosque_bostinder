@@ -31,9 +31,14 @@ public class PanelImagenAdmin extends JPanel implements PanelImagenI{
 	public PanelImagenAdmin() {
 		this.setSize(getPreferredSize());
 	}
+	/**
+	 * Este metodo funciona para pintar la imagen 
+	 *@param Graphics
+	 */
 
 	@Override
 	public void paintComponent(Graphics g) {
+	
 		Dimension tam = getSize();
 		img_fon = new ImageIcon(getClass().getResource("/imagenes/ImgAdmin.png"));
 		g.drawImage(img_fon.getImage(), 0, 0, tam.width,tam.height,null );

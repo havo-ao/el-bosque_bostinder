@@ -18,4 +18,9 @@ public class App_DTO {
 		this.usersList = usersList;
 	}
 
+	
+	public ArrayList<People>listaPersona(){
+		return usersList;
+	}
+	
 }

@@ -34,7 +34,7 @@ public class VentanaAdmin extends JFrame{ //hereda de ...
 		pad.setLayout(null);
 		setContentPane(pad);
 
-		stadistic  = new JButton("Stadistics");
+		stadistic  = new JButton("Estadisticas");
 		stadistic.setActionCommand("Estadisticas");
 		stadistic.setBorderPainted(true);
 		stadistic.setContentAreaFilled(true);
