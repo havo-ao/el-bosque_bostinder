@@ -38,30 +38,24 @@ public class VentanaAdmin extends JFrame{ //hereda de ...
 		stadistic.setActionCommand("Estadisticas");
 		stadistic.setBorderPainted(true);
 		stadistic.setContentAreaFilled(true);
-		stadistic.setForeground(new Color(255,255,255));
-		stadistic.setBackground(new Color(22, 20, 20));
 		stadistic.setBounds(225, 25, 145, 50);
-		stadistic.setFont(new Font("Calisto MT",Font.BOLD,18));
+		stadistic.setFont(new Font("Calisto MT",Font.BOLD,15));
 		add(stadistic);
 		
 		delete  = new JButton("Delete");
 		delete.setActionCommand("borrar");
 		delete.setBorderPainted(true);
 		delete.setContentAreaFilled(true);
-		delete.setForeground(new Color(255,255,255));
-		delete.setBackground(new Color(22, 20, 20));
 		delete.setBounds(400, 100, 150, 50);
-		delete.setFont(new Font("Calisto MT",Font.BOLD,18));
+		delete.setFont(new Font("Calisto MT",Font.BOLD,15));
 		add(delete);
 		
 		show_asc  = new JButton("Show ascendent");
 		show_asc.setActionCommand("mostrarAsc");
 		show_asc.setBorderPainted(true);
 		show_asc.setContentAreaFilled(true);
-		show_asc.setForeground(new Color(255,255,255));
-		show_asc.setBackground(new Color(22, 20, 20));
 		show_asc.setBounds(225, 200, 185, 50);
-		show_asc.setFont(new Font("Calisto MT",Font.BOLD,18));
+		show_asc.setFont(new Font("Calisto MT",Font.BOLD,15));
 		add(show_asc);
 
 	
@@ -69,39 +63,31 @@ public class VentanaAdmin extends JFrame{ //hereda de ...
 		filter.setActionCommand("Filtrarr");
 		filter.setBorderPainted(true);
 		filter.setContentAreaFilled(true);
-		filter.setForeground(new Color(255,255,255));
-		filter.setBackground(new Color(22, 20, 20));
 		filter.setBounds(400, 300, 125, 50);
-		filter.setFont(new Font("Calisto MT",Font.BOLD,18));
+		filter.setFont(new Font("Calisto MT",Font.BOLD,15));
 		add(filter);	
 		
 		
-		show_dec  = new JButton("Show descendent");
+		show_dec  = new JButton("Mostrar desc");
 		show_dec.setActionCommand("mostrarDEC");
 		show_dec.setBorderPainted(true);
 		show_dec.setContentAreaFilled(true);
-		show_dec.setForeground(new Color(255,255,255));
-		show_dec.setBackground(new Color(22, 20, 20));
 		show_dec.setBounds(225, 400, 185, 50);
-		show_dec.setFont(new Font("Calisto MT",Font.BOLD,18));
+		show_dec.setFont(new Font("Calisto MT",Font.BOLD,15));
 		add(show_dec);
 		
-		exit2  = new JButton("Exit");
+		exit2  = new JButton("Salir");
 		exit2.setActionCommand("EXIT2");
 		exit2.setBorderPainted(true);
 		exit2.setContentAreaFilled(true);
-		exit2.setForeground(new Color(255,255,255));
-		exit2.setBackground(new Color(22, 20, 20));
 		exit2.setBounds(25, 500, 100, 45);
 		exit2.setFont(new Font("Calisto MT",Font.BOLD,15));
 		add(exit2);	
 		
-		volver_adm  = new JButton("Return");
+		volver_adm  = new JButton("Volver");
 		volver_adm.setActionCommand("returnAdm");
 		volver_adm.setBorderPainted(true);
 		volver_adm.setContentAreaFilled(true);
-		volver_adm.setForeground(new Color(255,255,255));
-		volver_adm.setBackground(new Color(22, 20, 20));
 		volver_adm.setBounds(150, 500, 100, 45);
 		volver_adm.setFont(new Font("Calisto MT",Font.BOLD,15));
 		add(volver_adm);		

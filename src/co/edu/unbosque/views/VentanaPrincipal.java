@@ -38,28 +38,24 @@ public class VentanaPrincipal extends JFrame {
 		pimg.setLayout(null); //coordenadas
 		setContentPane(pimg);
 
-		register = new JButton("Register");
+		register = new JButton("Registrar usuario");
 		register.setActionCommand("Registrar"); //poderlo usar despues
 		register.setEnabled(true);//poder interactuar
 		register.setFocusPainted(true); //para pintar
 		register.setBorderPainted(true);
 		register.setContentAreaFilled(true); //pq despues sale vacio y f
 		register.setBounds(456, 156, 165,55);
-		register.setForeground(new Color(255,255,255));//color letra
-		register.setBackground(new Color(22, 20, 20));
-		register.setFont(new Font("Calisto MT",Font.BOLD,30));
+		register.setFont(new Font("Calisto MT",Font.BOLD,15));
 		add(register);
 		
-		log = new JButton("Log in");
+		log = new JButton("Iniciar sesión");
 		log.setActionCommand("goTologin"); //poderlo usar despues
 	//	log.setEnabled(true);//poder interactuar
 		log.setFocusPainted(true); //para pintar
 		log.setBorderPainted(true);
 		log.setContentAreaFilled(true); //pq despues sale vacio y f
 		log.setBounds(456, 356, 165,55);
-		log.setForeground(new Color(255,255,255));//color letra
-		log.setBackground(new Color(22, 20, 20));
-		log.setFont(new Font("Calisto MT",Font.BOLD,25)); //SansSerif
+		log.setFont(new Font("Calisto MT",Font.BOLD,15)); //SansSerif
 		add(log);
 	}
 
