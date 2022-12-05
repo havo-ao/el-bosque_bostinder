@@ -97,7 +97,6 @@ public class Controller implements ActionListener{ //ItemListener {
 		addListeners();
 	}
 
-//	
 	/**
 	 * Este metodo proporcina los Listeners a los objetos.
 	 * <b>pre</b> Los objetos debieron ser previamente inicializados. <br>
@@ -140,21 +139,21 @@ public class Controller implements ActionListener{ //ItemListener {
 
 		try {
 
-			if (comand.equals("logging")) { // el de vnt log
+			if (comand.equals("logging")) { 
 				mainWindow.setVisible(false);
 				menuWindow.setVisible(true);
 				// JOptionPane.showMessageDialog(null, "panitaaa");
 
 
 			}
-			if (comand.equals("Registrar")) { // la parte de registra
+			if (comand.equals("Registrar")) { 
 				mainWindow.setVisible(false);
 				registerWindow.setVisible(true);
 
 				//JOptionPane.showInputDialog(null,"en proceso");
 				//				floatingWindow.mostrarInfo("Procesoo");
 			}
-			if (comand.equals("usuario")) { // la de usuarios
+			if (comand.equals("usuario")) { 
 				mainWindow.setVisible(false);
 				JOptionPane.showInputDialog(null, "en proceso");
 
@@ -169,13 +168,12 @@ public class Controller implements ActionListener{ //ItemListener {
 				mainWindow.setVisible(true);
 				menuWindow.setVisible(false);
 			}
-			if (comand.equals("adminis")) { // VENTANA INFO ADMINS antes de abrir esta debe servir el log in de @ solo
-				// que aqui lo hice accesible de una
+			if (comand.equals("adminis")) { 
 				mainWindow.setVisible(false);
 				menuWindow.setVisible(false);
 				adminWindow.setVisible(true);
 			}
-			if (comand.equals("EXIT2")) { // es el boton de salida en la vnt de admin
+			if (comand.equals("EXIT2")) { 
 				mainWindow.setVisible(false);
 				menuWindow.setVisible(false);
 				adminWindow.setVisible(false);
@@ -186,45 +184,44 @@ public class Controller implements ActionListener{ //ItemListener {
 				adminWindow.setVisible(false);
 			}
 
-			if(comand.equals("Filtrarr")) { //es el boton de filtrar la info tal vez sea inecesario
-
+			if(comand.equals("Filtrarr")) { 
 			}		
-			if(comand.equals("mostrarAsc")) { //boton de organizar ascen
+			if(comand.equals("mostrarAsc")) { 
 
 			}
-			if(comand.equals("mostrarDEC")) { //boton de organizar dez
+			if(comand.equals("mostrarDEC")) { 
 
 			}
-			if(comand.equals("Estadisticas")) { //Lo de mostrar las esst
+			if(comand.equals("Estadisticas")) { 
 				stadisticWindow.setVisible(true);
 				mainWindow.setVisible(false);
 				menuWindow.setVisible(false);
 				adminWindow.setVisible(false);
 			}
-			//estos se refieren al de venEstadisticaas
-			if(comand.equals("personal")) { //Lo de mostrar las esst personales
+			
+			if(comand.equals("personal")) { 
 				//	stadisticWindow.setVisible(true);
 
 			}
-			if(comand.equals("Actgeneral")) { //Lo de mostrar las esst general
+			if(comand.equals("Actgeneral")) { 
 				//stadisticWindow.setVisible(true);
 
 			}
-			if(comand.equals("modify")) { //Lo de modificar usuario 
+			if(comand.equals("modify")) { 
 					stadisticWindow.setVisible(false);
 //					People = new People(comand, comand, comand, comand, comand, comand, null, 0)
 
 			}
-			if(comand.equals("volverEstadistic1")) { //Lo de mostrar las esst
+			if(comand.equals("volverEstadistic1")) { 
 				stadisticWindow.setVisible(false);
 				mainWindow.setVisible(false);
 				menuWindow.setVisible(false);
 				adminWindow.setVisible(true);
 			}
 
-			//Esto se refiere al borrar user
+			
 
-			if(comand.equals("borrar")) {  //Lo de dar de baja
+			if(comand.equals("borrar")) {  
 				//	String nombre = JOptionPane.showInputDialog(null,"INGRESE EL USER A ELIMINAR");
 				String nombre = floatingWindow.ingresarString(null,"Ingrese el user a Eliminar");
 				System.out.println(nombre);
@@ -242,7 +239,6 @@ public class Controller implements ActionListener{ //ItemListener {
 
 
 		} catch (Exception e2) {
-			//lo de las vainas flotantes
 			JOptionPane.showMessageDialog(null,"ERROR", "OJO!",JOptionPane.ERROR_MESSAGE);
 			//		e2.printStackTrace();
 		}
