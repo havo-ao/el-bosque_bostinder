@@ -57,25 +57,19 @@ public class VentanaMenu extends JFrame{
 		user = new JButton("USER");
 		user.setActionCommand("userLogin");
 		//user.setEnabled(false);
-		user.setBackground(new Color(22, 20, 20));
-		user.setForeground(new Color(255,255,255));
-		user.setFont(new Font("Calisto MT",Font.BOLD,25));
+		user.setFont(new Font("Calisto MT",Font.BOLD,15));
 		user.setBounds(40,40,130,65);
 		add(user);
 
 		admin = new JButton("Administrador");
 		admin.setActionCommand("adminLogin");
-		admin.setBackground(new Color(22, 20, 20));
-		admin.setForeground(new Color(255,255,255));
-		admin.setFont(new Font("Calisto MT",Font.BOLD,25));
+		admin.setFont(new Font("Calisto MT",Font.BOLD,15));
 		admin.setBounds(550,350,130,50);
 		add(admin);
 
 		volver = new JButton("Volver");
 		volver.setActionCommand("Volver1");
-		volver.setBackground(new Color(22, 20, 20));
-		volver.setForeground(new Color(255,255,255));
-		volver.setFont(new Font("Calisto MT",Font.BOLD,20));
+		volver.setFont(new Font("Calisto MT",Font.BOLD,15));
 		volver.setBounds(600,500,100,50);
 		add(volver);
 	}

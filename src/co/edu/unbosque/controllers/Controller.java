@@ -21,6 +21,7 @@ import co.edu.unbosque.models.People_CRUD_Interface;
 import co.edu.unbosque.views.LoginWindow;
 import co.edu.unbosque.views.Messages;
 import co.edu.unbosque.views.PanelImagenPersona;
+import co.edu.unbosque.views.ProfilesWindow;
 import co.edu.unbosque.views.UserWindowApp;
 import co.edu.unbosque.views.VentanaAdmin;
 import co.edu.unbosque.views.VentanaMenu;
@@ -37,6 +38,7 @@ public class Controller implements ActionListener { // ItemListener {
 	private RegisterWindow registerWindow;
 	private LoginWindow loginWindow;
 	private LoginWindow loginAdminWindow;
+	private ProfilesWindow profilesWindow;
 
 	private People_CRUD peopleDao;
 
@@ -58,6 +60,7 @@ public class Controller implements ActionListener { // ItemListener {
 		registerWindow = new RegisterWindow();
 		loginWindow = new LoginWindow("");
 		loginAdminWindow = new LoginWindow("admin");
+		profilesWindow = new ProfilesWindow();
 
 		peopleDao = new People_CRUD();
 		app_DTO = new App_DTO();
@@ -84,6 +87,10 @@ public class Controller implements ActionListener { // ItemListener {
 
 		loginAdminWindow.getBtnBack().addActionListener(this);
 		loginAdminWindow.getBtnLogin().addActionListener(this);
+		
+		profilesWindow.getBtnLike().addActionListener(this);
+		profilesWindow.getBtnDislike().addActionListener(this);
+		profilesWindow.getBtnLogout().addActionListener(this);
 
 		menuWindow.getUser().addActionListener(this);
 		menuWindow.getAdmin().addActionListener(this);
@@ -115,11 +122,30 @@ public class Controller implements ActionListener { // ItemListener {
 
 			registerWindow.genderEvents(registerGender);
 
+			if (comand.equals("login")) { // el de vnt log
+				mainWindow.setVisible(false);
+				menuWindow.setVisible(true);
+			}
+			
+			if (comand.equals("registerUser")) { // el de vnt log
+				registerUserActions();
+			}
+			
+			if (comand.equals("loginUser")) { // el de vnt log
+				loginUserActions();
+			}
+			
+			if (comand.equals("loginAdmin")) { // el de vnt log
+				loginAdminWindow.setVisible(false);
+				adminWindow.setVisible(true);
+			}
+			
 			if (comand.equals("goTologin")) { // el de vnt log
 				mainWindow.setVisible(false);
 				menuWindow.setVisible(true);
 
 			}
+			
 			if (comand.equals("backToLoginRegister")) { // el de vnt log
 				registerWindow.setVisible(false);
 				loginWindow.setVisible(true);
@@ -161,11 +187,6 @@ public class Controller implements ActionListener { // ItemListener {
 			if (comand.equals("goToRegister")) {
 				loginWindow.setVisible(false);
 				registerWindow.setVisible(true);
-			}
-
-			if (comand.equals("Volver1")) {
-				// JOptionPane.showInputDialog(null,"en proceso");
-				floatingWindow.mostrarInfo("Proceso");
 			}
 
 			if (comand.equals("Volver1")) {
@@ -248,6 +269,17 @@ public class Controller implements ActionListener { // ItemListener {
 			JOptionPane.showMessageDialog(null, "ERROR", "OJO!", JOptionPane.ERROR_MESSAGE);
 			// e2.printStackTrace();
 		}
+	}
+	
+	public void registerUserActions() {
+		floatingWindow.mostrarInfo("Usuario Registrado con Éxito");
+		registerWindow.setVisible(false);
+		loginWindow.setVisible(true);
+	}
+	
+	public void loginUserActions() {
+		loginWindow.setVisible(false);
+		profilesWindow.setVisible(true);
 	}
 
 	// @Override

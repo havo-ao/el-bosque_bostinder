@@ -173,12 +173,6 @@ public class RegisterWindow extends JFrame {
 
 	// Function to add Buttons
 	private void addButtons() {
-
-		/*
-		 * add(components.addButton(btnPhoto, "Subir foto", getCol(3), getRow(8),
-		 * defaultWidth, defaultHeight)); btnPhoto.setActionCommand("uploadPhoto");
-		 */
-
 		add(components.addButton(btnRegister, "Registrarse", getCol(4), getRow(11), defaultWidth, defaultHeight));
 		btnRegister.setActionCommand("registerUser");
 
