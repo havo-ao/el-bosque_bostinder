@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 import java.util.Scanner;
@@ -15,6 +16,7 @@ import javax.swing.JOptionPane;
 import co.edu.unbosque.views.RegisterWindow;
 import co.edu.unbosque.models.App_DTO;
 import co.edu.unbosque.models.EnviarCorreos;
+import co.edu.unbosque.models.FileCSV;
 import co.edu.unbosque.models.People;
 import co.edu.unbosque.models.People_CRUD;
 import co.edu.unbosque.models.People_CRUD_Interface;
@@ -49,6 +51,10 @@ public class Controller implements ActionListener { // ItemListener {
 	private EnviarCorreos sendEmail;
 
 	private VentanaSelectionSort windowSelection;
+
+
+	private FileCSV fileCSV;
+
 	public Controller() {
 		mainWindow = new VentanaPrincipal();
 		menuWindow = new VentanaMenu();
@@ -63,8 +69,9 @@ public class Controller implements ActionListener { // ItemListener {
 		userWindowApp = new UserWindowApp();
 		sendEmail = new EnviarCorreos();
 		windowSelection = new VentanaSelectionSort();
-		
-		
+
+		fileCSV = new FileCSV();
+
 		addListeners();
 	}
 
@@ -111,19 +118,19 @@ public class Controller implements ActionListener { // ItemListener {
 				mainWindow.setVisible(false);
 				registerWindow.setVisible(true);
 
-				
+
 			}
 			if (comand.equals("usuario")) { // la de usuarios
 				mainWindow.setVisible(false);
-			//	JOptionPane.showInputDialog(null, "en proceso");
+				//	JOptionPane.showInputDialog(null, "en proceso");
 
 			}
 
-//			if (comand.equals("Volver1")) {
-//				//	JOptionPane.showInputDialog(null,"en proceso");
-//				//floatingWindow.mostrarInfo("Proceso");
-//				
-//			}
+			//			if (comand.equals("Volver1")) {
+			//				//	JOptionPane.showInputDialog(null,"en proceso");
+			//				//floatingWindow.mostrarInfo("Proceso");
+			//				
+			//			}
 
 			if(comand.equals("Volver1")) {
 				mainWindow.setVisible(true);
@@ -205,7 +212,7 @@ public class Controller implements ActionListener { // ItemListener {
 					floatingWindow.mostrarInfo("Not deleted");
 				}
 			}
-			
+
 			if(comand.equals("VolverSelection")) {
 				stadisticWindow.setVisible(false);
 				mainWindow.setVisible(false);
@@ -225,11 +232,22 @@ public class Controller implements ActionListener { // ItemListener {
 
 		} catch (Exception e2) {
 			//lo de las vainas flotantes
-		floatingWindow.mostrarError("Something failed");
+			floatingWindow.mostrarError("Something failed");
 			//		e2.printStackTrace();
 		}
 	}
 
+
+	public void loadCSV() {
+		try {
+			fileCSV.loadCSVMan();
+			fileCSV.LoadCSVWoman();
+
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			System.out.println(2);	
+		}
+	}
 	//	@Override
 	//	public void itemStateChanged(ItemEvent itemEvent) {
 	//

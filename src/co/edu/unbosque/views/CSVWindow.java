@@ -1,5 +1,8 @@
 package co.edu.unbosque.views;
 
-public class CSVWindow {
+import javax.swing.JButton;
 
+public class CSVWindow {
+	private JButton volver;
+	private PanelSelectionSort panelSeleccion;
 }
